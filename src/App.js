@@ -1,25 +1,54 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import Search from './components/Search';
+import Navigationbar from './components/Navbar';
 
-function App() {
+const App = () => {
+  const [countries, setCountries] = useState([]);
+  useEffect(() => {
+    console.log('effect');
+    axios.get('https://restcountries.com/v2/all').then((response) => {
+      console.log('countries promise fulfilled');
+      setCountries(response.data);
+    });
+  }, []);
+  console.log('render', countries.length, 'countries');
+  console.log('the countries are ', countries);
+
+  const [weather, setWeather] = useState([]);
+  const [capital, setCapital] = useState(null);
+  console.log('The capital in App.js is', capital);
+
+  useEffect(() => {
+    console.log('effect');
+    if (!capital) setCapital('Lisbon');
+    const api_key = process.env.REACT_APP_API_KEY;
+    axios
+      .get(`http://api.weatherstack.com/current?access_key=${api_key}&query=${capital}`)
+      .then((response) => {
+        console.log('weather promise fulfilled');
+        setWeather(response.data);
+      })
+      .catch((error) => {
+        console.log('weather promise failed');
+      });
+  }, [capital]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='principal'>
+      <Navigationbar />
+      <div className='wrapper'>
+        <div className='main'>
+          <Search
+            countries={countries}
+            weather={weather}
+            setCapital={setCapital}
+            capital={capital}
+          />
+        </div>
+      </div>
     </div>
   );
-}
+};
 
 export default App;

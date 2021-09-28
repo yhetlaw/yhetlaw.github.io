@@ -1,0 +1,59 @@
+.principal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.principal .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  text-align: left;
+  height: 100vh;
+  width: 70%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.principal .wrapper .main {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+}
+
+.principal .wrapper .main .search-div {
+  position: relative;
+  top: 100px;
+}
+
+.principal .wrapper .main .search-div .country-flag {
+  width: 500px;
+}
+
+.principal .wrapper .main .search-div .input-div {
+  margin-bottom: 20px;
+}
+
+.principal .wrapper .main .search-div .input-div input {
+  padding: 10px;
+}
+/*# sourceMappingURL=index.css.map */
