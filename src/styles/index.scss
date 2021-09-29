@@ -48,22 +48,35 @@
           }
         }
       }
-      .box-2 {
-        flex: 3;
-        display: flex;
-
-        div {
-          flex: 1;
-          justify-content: center;
-        }
-      }
-      .box-3 {
-        flex: 1;
-      }
     }
 
     .country-flag {
       width: 500px;
+    }
+
+    .result-container {
+      display: flex;
+
+      div {
+        padding: 10px;
+        //border: 1px black solid;
+      }
+
+      .result-box-1 {
+        flex: 1;
+        order: 2;
+      }
+      .result-box-2 {
+        flex: 1;
+        order: 3;
+      }
+      .result-box-3 {
+        flex: 1;
+        order: 1;
+        img {
+          width: 90%;
+        }
+      }
     }
   }
 

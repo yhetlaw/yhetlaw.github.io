@@ -78,32 +78,49 @@
   width: 100%;
 }
 
-.principal .wrapper .container-1 .box-2 {
-  -webkit-box-flex: 3;
-      -ms-flex: 3;
-          flex: 3;
+.principal .wrapper .country-flag {
+  width: 500px;
+}
+
+.principal .wrapper .result-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.principal .wrapper .container-1 .box-2 div {
+.principal .wrapper .result-container div {
+  padding: 10px;
+}
+
+.principal .wrapper .result-container .result-box-1 {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
 }
 
-.principal .wrapper .container-1 .box-3 {
+.principal .wrapper .result-container .result-box-2 {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
 }
 
-.principal .wrapper .country-flag {
-  width: 500px;
+.principal .wrapper .result-container .result-box-3 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.principal .wrapper .result-container .result-box-3 img {
+  width: 90%;
 }
 
 .principal .navbar-css {

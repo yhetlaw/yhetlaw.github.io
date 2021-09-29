@@ -71,30 +71,24 @@ const Search = ({ countries, weather, setCapital }) => {
           <TooManyCatches status={tooManyCatchesStatus} />
         </div>
       </div>
-      <div className='box-2'>
-        <div>
-          <CountriesList
-            status={countryListStatus}
-            matchedCountries={matchedCountries}
-            handleShowInfo={handleShowInfo}
-          />
-        </div>
-        <div>
-          <ShowInfo
-            status={showInfoStatus}
-            matchedCountries={matchedCountries}
-            id={id}
-            weather={weather}
-            indexCountry={indexCountry}
-            setCapital={setCapital}
-          />
-        </div>
-      </div>
-      <div className='box-3'>
+      <div>
+        <CountriesList
+          status={countryListStatus}
+          matchedCountries={matchedCountries}
+          handleShowInfo={handleShowInfo}
+        />
         <FullCountry
           status={fullCountryStatus}
           matchedCountries={matchedCountries}
           weather={weather}
+        />
+        <ShowInfo
+          status={showInfoStatus}
+          matchedCountries={matchedCountries}
+          id={id}
+          weather={weather}
+          indexCountry={indexCountry}
+          setCapital={setCapital}
         />
       </div>
     </div>
