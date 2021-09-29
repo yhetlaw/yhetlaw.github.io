@@ -35,16 +35,18 @@ const App = () => {
   }, [capital]);
 
   return (
-    <div className='principal'>
-      <Navigationbar />
-      <div className='wrapper'>
-        <div className='main'>
-          <Search
-            countries={countries}
-            weather={weather}
-            setCapital={setCapital}
-            capital={capital}
-          />
+    <div>
+      <div className='principal'>
+        <Navigationbar />
+        <div className='wrapper'>
+          <div className='container-1'>
+            <Search
+              countries={countries}
+              weather={weather}
+              setCapital={setCapital}
+              capital={capital}
+            />
+          </div>
         </div>
       </div>
     </div>

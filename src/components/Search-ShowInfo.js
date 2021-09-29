@@ -23,8 +23,7 @@ const ShowInfo = ({ status, matchedCountries, weather, indexCountry, setCapital 
       <img
         src={matchedCountries[indexCountry].flag}
         alt={matchedCountries[indexCountry].name}
-        width='170'
-        height='150'></img>
+        width='170'></img>
       <h2>Weather in {matchedCountries[indexCountry].capital}</h2>
       <p>
         <b>temperature:</b> {weather.current.temperature} Celsius

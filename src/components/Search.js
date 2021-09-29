@@ -60,29 +60,43 @@ const Search = ({ countries, weather, setCapital }) => {
 
   return (
     <div className='search-div'>
-      <div className='input-div'>
-        Search for countries:
-        <input id='inputSearch' onChange={handleSearchChange} />
+      <div className='box-1'>
+        <div className='box-1-1'>
+          <div className='input-div'>
+            <h5>Search for countries:</h5>
+            <input id='inputSearch' onChange={handleSearchChange} autocomplete='off' />
+          </div>
+        </div>
+        <div className='box-1-2'>
+          <TooManyCatches status={tooManyCatchesStatus} />
+        </div>
       </div>
-      <TooManyCatches status={tooManyCatchesStatus} />
-      <CountriesList
-        status={countryListStatus}
-        matchedCountries={matchedCountries}
-        handleShowInfo={handleShowInfo}
-      />
-      <FullCountry
-        status={fullCountryStatus}
-        matchedCountries={matchedCountries}
-        weather={weather}
-      />
-      <ShowInfo
-        status={showInfoStatus}
-        matchedCountries={matchedCountries}
-        id={id}
-        weather={weather}
-        indexCountry={indexCountry}
-        setCapital={setCapital}
-      />
+      <div className='box-2'>
+        <div>
+          <CountriesList
+            status={countryListStatus}
+            matchedCountries={matchedCountries}
+            handleShowInfo={handleShowInfo}
+          />
+        </div>
+        <div>
+          <ShowInfo
+            status={showInfoStatus}
+            matchedCountries={matchedCountries}
+            id={id}
+            weather={weather}
+            indexCountry={indexCountry}
+            setCapital={setCapital}
+          />
+        </div>
+      </div>
+      <div className='box-3'>
+        <FullCountry
+          status={fullCountryStatus}
+          matchedCountries={matchedCountries}
+          weather={weather}
+        />
+      </div>
     </div>
   );
 };
