@@ -18,6 +18,7 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  background: whitesmoke;
 }
 
 .principal .wrapper .container-1 {

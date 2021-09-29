@@ -7,8 +7,13 @@ const Navigationbar = () => {
       <Navbar fixed='top' className='navbar-css' variant='dark'>
         <Container className='navbar-title'>
           <Navbar.Brand>
-            <img alt='' src='' width='30' height='30' className='d-inline-block align-top' /> Data
-            for countries
+            <img
+              alt=''
+              src='https://www.freeiconspng.com/thumbs/globe-png/globe-png-hd-1.png'
+              width='30'
+              className='d-inline-block align-top'
+            />{' '}
+            Data for countries
           </Navbar.Brand>
         </Container>
       </Navbar>
