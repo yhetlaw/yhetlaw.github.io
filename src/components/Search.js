@@ -3,16 +3,20 @@ import FullCountry from './Search-FullCountry';
 import ShowInfo from './Search-ShowInfo';
 import CountriesList from './Search-CountriesList';
 import TooManyCatches from './Search.TooManyCatches';
+import InvalidText from './Search.InvalidText';
 
 const Search = ({ countries, weather, setCapital }) => {
   const inputSearch = document.getElementById('inputSearch');
   const [tooManyCatchesStatus, setTooManyCatchesStatus] = useState(false);
+  const [invalidText, setInvalidText] = useState(false);
   const [countryListStatus, setCountryListStatus] = useState(false);
   const [fullCountryStatus, setFullCountryStatus] = useState(false);
   const [showInfoStatus, setShowInfoStatus] = useState(false);
   const [matchedCountries, setMatchedCountries] = useState([]);
   const [mapedCountries, setMapedCountries] = useState([]);
   const [id, setId] = useState('');
+
+  const regex = /^[a-zA-Z]+$/;
 
   const handleSearchChange = (event) => {
     const newSearch = event.target.value.toLowerCase();
@@ -26,8 +30,15 @@ const Search = ({ countries, weather, setCapital }) => {
     console.log(`the maped countries are ${mapedCountries}`);
     setMapedCountries(mapedCountries);
 
-    if (!inputSearch) {
-      setTooManyCatchesStatus(true);
+    console.log(`length is ${inputSearch.value.length}`);
+    if (!inputSearch || inputSearch.value.length === 0) {
+      setInvalidText(false);
+      setTooManyCatchesStatus(false);
+      setFullCountryStatus(false);
+      setCountryListStatus(false);
+    } else if (!inputSearch.value.match(regex) || inputSearch.value.length === 0) {
+      setTooManyCatchesStatus(false);
+      setInvalidText(true);
       setFullCountryStatus(false);
       setCountryListStatus(false);
     } else if (filteredCountries.length === 1) {
@@ -69,6 +80,7 @@ const Search = ({ countries, weather, setCapital }) => {
         </div>
         <div className='box-1-2'>
           <TooManyCatches status={tooManyCatchesStatus} />
+          <InvalidText status={invalidText} />
         </div>
       </div>
       <div>

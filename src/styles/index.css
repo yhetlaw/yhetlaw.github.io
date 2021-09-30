@@ -8,6 +8,9 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background: #020024;
+  background: -webkit-gradient(linear, left top, right top, from(whitesmoke), to(white));
+  background: linear-gradient(90deg, whitesmoke 0%, white 100%);
 }
 
 .principal .wrapper {
@@ -18,7 +21,6 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  background: whitesmoke;
 }
 
 .principal .wrapper .container-1 {
@@ -134,5 +136,9 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.list-item {
+  padding: 10px;
 }
 /*# sourceMappingURL=index.css.map */

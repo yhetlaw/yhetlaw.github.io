@@ -1,10 +1,15 @@
+import { Button } from 'react-bootstrap';
+
 const ListItem = ({ handleShowInfo, text, id }) => {
   return (
-    <li>
+    <li className='list-item'>
       {text}{' '}
       <button data-id={id} onClick={handleShowInfo}>
         Show info
       </button>
+      <Button variant='secondary' data-id={id} onClick={handleShowInfo}>
+        Show info
+      </Button>{' '}
     </li>
   );
 };
