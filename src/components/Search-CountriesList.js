@@ -4,9 +4,6 @@ const ListItem = ({ handleShowInfo, text, id }) => {
   return (
     <li className='list-item'>
       {text}{' '}
-      <button data-id={id} onClick={handleShowInfo}>
-        Show info
-      </button>
       <Button variant='secondary' data-id={id} onClick={handleShowInfo}>
         Show info
       </Button>{' '}
