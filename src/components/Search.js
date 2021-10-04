@@ -52,6 +52,7 @@ const Search = ({ countries, weather, setCapital }) => {
       filteredCountries.length !== 1
     ) {
       setCountryListStatus(true);
+      setInvalidText(false);
       setTooManyCatchesStatus(false);
       setFullCountryStatus(false);
       setShowInfoStatus(false);
@@ -59,6 +60,7 @@ const Search = ({ countries, weather, setCapital }) => {
       setTooManyCatchesStatus(true);
       setFullCountryStatus(false);
       setCountryListStatus(false);
+      setInvalidText(false);
     }
   };
 
