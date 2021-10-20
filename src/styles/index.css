@@ -86,10 +86,50 @@
 }
 
 .principal .wrapper .container-1 .countries-list {
-  background-color: whitesmoke;
   border-radius: 20px;
-  padding: 30px;
-  margin: 2% 0 2% 0;
+  margin: -4% 0 3% 0;
+  background-color: whitesmoke;
+}
+
+.principal .wrapper .container-1 .countries-list .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.principal .wrapper .container-1 .countries-list .cards .cards_item {
+  width: 12rem !important;
+  -o-object-fit: cover !important;
+     object-fit: cover !important;
+  height: 8rem;
+  border-radius: 10px;
+  margin: 5px 15px 7rem 15px;
+  background-size: 100%;
+  cursor: pointer;
+}
+
+.principal .wrapper .container-1 .countries-list .cards .cards_item:hover {
+  opacity: 0.7;
+}
+
+.principal .wrapper .container-1 .countries-list .cards .cards_item div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: auto;
+  margin-top: 7rem;
+  font-size: 18px;
 }
 
 .principal .wrapper .country-flag {
@@ -145,34 +185,5 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.list-item {
-  padding: 10px;
-}
-
-.cards {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  /* Put a card in the next row when previous cards take all width */
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-left: -8px;
-  margin-right: -8px;
-}
-
-.cards__item {
-  /* There will be 4 cards per row */
-  -ms-flex-preferred-size: 20%;
-      flex-basis: 20%;
-  height: 80px;
-  background-color: aqua;
-  padding-left: 8px;
-  padding-right: 8px;
-  border-radius: 10px;
 }
 /*# sourceMappingURL=index.css.map */

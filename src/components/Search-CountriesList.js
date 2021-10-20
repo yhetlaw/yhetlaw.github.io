@@ -1,13 +1,12 @@
-import { Button } from 'react-bootstrap';
-
-const ListItem = ({ handleShowInfo, text, id }) => {
+const ItemCard = ({ handleShowInfo, text, id, flag }) => {
   return (
-    <li className='list-item'>
-      {text}{' '}
-      <Button variant='secondary' data-id={id} onClick={handleShowInfo}>
-        Show info
-      </Button>{' '}
-    </li>
+    <div
+      className='cards_item'
+      data-id={id}
+      onClick={handleShowInfo}
+      style={{ backgroundImage: `url(${flag})` }}>
+      <div>{text}</div>
+    </div>
   );
 };
 
@@ -15,23 +14,19 @@ const CountriesList = ({ status, matchedCountries, handleShowInfo }) => {
   if (!status) {
     return null;
   }
+
   return (
     <div className='countries-list'>
-      <ul>
+      <div className='cards'>
         {matchedCountries.map((country) => (
-          <ListItem
-            key={country.name}
+          <ItemCard
             text={country.name}
+            key={country.name}
             handleShowInfo={handleShowInfo}
             id={country.name}
+            flag={country.flag}
           />
         ))}
-      </ul>
-      <div class='cards'>
-        <div class='cards__item'>...</div>
-        <div class='cards__item'>...</div>
-        <div class='cards__item'>...</div>
-        <div class='cards__item'>...</div>
       </div>
     </div>
   );
