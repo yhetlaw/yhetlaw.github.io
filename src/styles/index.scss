@@ -2,9 +2,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgb(2, 0, 36);
-  background: linear-gradient(90deg, whitesmoke 0%, white 100%);
+  background: rgb(255, 255, 255);
   //background: whitesmoke;
+
   .wrapper {
     margin-top: 100px;
     text-align: left;
@@ -49,6 +49,18 @@
           }
         }
       }
+      .main-full-country {
+        background-color: whitesmoke;
+        border-radius: 20px;
+        padding: 30px;
+      }
+
+      .countries-list {
+        background-color: whitesmoke;
+        border-radius: 20px;
+        padding: 30px;
+        margin: 2% 0 2% 0;
+      }
     }
 
     .country-flag {
@@ -83,7 +95,6 @@
 
   .navbar-css {
     background: rgb(2, 0, 36);
-    background: linear-gradient(90deg, rgb(102, 102, 102) 0%, rgb(27, 27, 27) 100%);
 
     .navbar-title {
       justify-content: center;
@@ -93,4 +104,24 @@
 
 .list-item {
   padding: 10px;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  /* Put a card in the next row when previous cards take all width */
+  flex-wrap: wrap;
+
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.cards__item {
+  /* There will be 4 cards per row */
+  flex-basis: 20%;
+  height: 80px;
+  background-color: aqua;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 10px;
 }

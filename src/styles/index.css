@@ -8,9 +8,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: #020024;
-  background: -webkit-gradient(linear, left top, right top, from(whitesmoke), to(white));
-  background: linear-gradient(90deg, whitesmoke 0%, white 100%);
+  background: white;
 }
 
 .principal .wrapper {
@@ -81,6 +79,19 @@
   width: 100%;
 }
 
+.principal .wrapper .container-1 .main-full-country {
+  background-color: whitesmoke;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.principal .wrapper .container-1 .countries-list {
+  background-color: whitesmoke;
+  border-radius: 20px;
+  padding: 30px;
+  margin: 2% 0 2% 0;
+}
+
 .principal .wrapper .country-flag {
   width: 500px;
 }
@@ -128,8 +139,6 @@
 
 .principal .navbar-css {
   background: #020024;
-  background: -webkit-gradient(linear, left top, right top, from(#666666), to(#1b1b1b));
-  background: linear-gradient(90deg, #666666 0%, #1b1b1b 100%);
 }
 
 .principal .navbar-css .navbar-title {
@@ -140,5 +149,30 @@
 
 .list-item {
   padding: 10px;
+}
+
+.cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  /* Put a card in the next row when previous cards take all width */
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.cards__item {
+  /* There will be 4 cards per row */
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+  height: 80px;
+  background-color: aqua;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 10px;
 }
 /*# sourceMappingURL=index.css.map */

@@ -16,7 +16,7 @@ const CountriesList = ({ status, matchedCountries, handleShowInfo }) => {
     return null;
   }
   return (
-    <div>
+    <div className='countries-list'>
       <ul>
         {matchedCountries.map((country) => (
           <ListItem
@@ -27,6 +27,12 @@ const CountriesList = ({ status, matchedCountries, handleShowInfo }) => {
           />
         ))}
       </ul>
+      <div class='cards'>
+        <div class='cards__item'>...</div>
+        <div class='cards__item'>...</div>
+        <div class='cards__item'>...</div>
+        <div class='cards__item'>...</div>
+      </div>
     </div>
   );
 };

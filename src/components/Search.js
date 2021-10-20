@@ -72,11 +72,11 @@ const Search = ({ countries, weather, setCapital }) => {
   };
 
   return (
-    <div className='search-div'>
+    <div>
       <div className='box-1'>
         <div className='box-1-1'>
           <div className='input-div'>
-            <h5>Search for countries:</h5>
+            <h5>Search:</h5>
             <input id='inputSearch' onChange={handleSearchChange} autocomplete='off' />
           </div>
         </div>

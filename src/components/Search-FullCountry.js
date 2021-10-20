@@ -3,10 +3,8 @@ const FullCountry = ({ status, matchedCountries, weather }) => {
     return null;
   }
   return (
-    <div>
-      <hr />
+    <div className='main-full-country'>
       <h1 style={{ textAlign: 'center' }}>{matchedCountries[0].name}</h1>
-      <hr />
       <div className='result-container'>
         <div className='result-box-1'>
           <h5>Languages:</h5>
@@ -16,14 +14,12 @@ const FullCountry = ({ status, matchedCountries, weather }) => {
             ))}
           </ul>
           <p>
-            <b>Population:</b>
-            {matchedCountries[0].population}
+            <b>Population:</b> {matchedCountries[0].population}
           </p>
         </div>
         <div className='result-box-2'>
           <p>
-            <b>Capital:</b>
-            {matchedCountries[0].capital}
+            <b>Capital:</b> {matchedCountries[0].capital}
           </p>
           <p>
             <b>Temperature in {matchedCountries[0].capital}:</b> {weather.current.temperature}{' '}

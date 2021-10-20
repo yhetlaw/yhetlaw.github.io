@@ -4,10 +4,8 @@ const ShowInfo = ({ status, matchedCountries, weather, indexCountry, setCapital 
   }
   setCapital(matchedCountries[indexCountry].capital);
   return (
-    <div>
-      <hr />
+    <div className='main-full-country'>
       <h1 style={{ textAlign: 'center' }}>{matchedCountries[indexCountry].name}</h1>
-      <hr />
       <div className='result-container'>
         <div className='result-box-1'>
           <h5>Languages:</h5>
