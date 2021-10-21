@@ -51,27 +51,69 @@
       }
       .main-full-country {
         background-color: whitesmoke;
-        border-radius: 20px;
+        width: calc(100vw - (100vw - 100%));
+        position: absolute;
+        left: 0;
         padding: 30px;
+
+        .result-container {
+          display: flex;
+
+          div {
+            padding: 10px;
+            //border: 1px black solid;
+          }
+
+          .result-box-1 {
+            flex: 1;
+            order: 2;
+            margin-left: 20%;
+          }
+          .result-box-2 {
+            flex: 1;
+            order: 3;
+          }
+          .result-box-3 {
+            flex: 1;
+            order: 1;
+
+            img {
+              width: auto;
+              height: 100%;
+              position: absolute;
+              left: 5%;
+              top: 0%;
+            }
+          }
+        }
       }
 
       .countries-list {
-        border-radius: 20px;
-
-        margin: -4% 0 3% 0;
+        width: calc(100vw - (100vw - 100%));
+        height: auto;
+        position: absolute;
+        left: 0%;
         background-color: whitesmoke;
+
+        .button-close {
+          float: right;
+          border: none;
+          background: transparent;
+          font-size: 20px;
+        }
 
         .cards {
           display: flex;
           justify-content: center;
           flex-wrap: wrap;
+          //background-color: rgb(139, 19, 19);
 
           .cards_item {
             width: 12rem !important;
             object-fit: cover !important;
             height: 8rem;
             border-radius: 10px;
-            margin: 5px 15px 7rem 15px;
+            margin: 5px 15px 6rem 15px;
             background-size: 100%;
             cursor: pointer;
 
@@ -95,31 +137,6 @@
     .country-flag {
       width: 500px;
     }
-
-    .result-container {
-      display: flex;
-
-      div {
-        padding: 10px;
-        //border: 1px black solid;
-      }
-
-      .result-box-1 {
-        flex: 1;
-        order: 2;
-      }
-      .result-box-2 {
-        flex: 1;
-        order: 3;
-      }
-      .result-box-3 {
-        flex: 1;
-        order: 1;
-        img {
-          width: 90%;
-        }
-      }
-    }
   }
 
   .navbar-css {
@@ -128,5 +145,18 @@
     .navbar-title {
       justify-content: center;
     }
+  }
+}
+
+.close {
+  //background-color: blue;
+  float: right;
+  color: rgb(179, 179, 179);
+  border: none;
+  background: transparent;
+
+  svg {
+    width: 35px;
+    height: 35px;
   }
 }

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Search from './components/Search';
 import Navigationbar from './components/Navbar';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
   const [countries, setCountries] = useState([]);
