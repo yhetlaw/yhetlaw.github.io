@@ -73,6 +73,8 @@ const Search = ({ countries, weather, setCapital }) => {
 
   const CloseButtonHandle = () => {
     setFullCountryStatus(false);
+    setShowInfoStatus(false);
+    setCountryListStatus(false);
     inputSearch.value = '';
   };
 
@@ -104,6 +106,7 @@ const Search = ({ countries, weather, setCapital }) => {
         />
         <ShowInfo
           status={showInfoStatus}
+          CloseButtonHandle={CloseButtonHandle}
           matchedCountries={matchedCountries}
           id={id}
           weather={weather}
