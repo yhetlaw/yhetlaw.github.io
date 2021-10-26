@@ -4,7 +4,38 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgb(255, 255, 255);
+  background: white;
+  overflow: hidden;
+  overflow-y: auto;
+  .home-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6%;
+    height: 87vh;
+    width: 100vw;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+
+    .home-div-main {
+      background-color: wheat;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      width: 70%;
+      height: 70%;
+
+      div {
+        border: 2px solid black;
+      }
+
+      .home-div-box-1 {
+        flex: 1;
+      }
+      .home-div-box-2 {
+        flex: 1;
+      }
+    }
+  }
 
   //background: whitesmoke;
 
@@ -145,8 +176,14 @@
   }
 
   .navbar-css {
-    background: rgb(2, 0, 36);
+    background: rgb(31, 31, 31);
     font-family: 'Pacifico', cursive;
+    height: 13%;
+
+    .navbar-link {
+      text-decoration: none;
+      color: white;
+    }
   }
 }
 
