@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Rampart+One&family=Zen+Kaku+Gothic+New:wght@500&display=swap");
 .principal {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -19,6 +20,7 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
 }
 
 .principal .wrapper .container-1 {
@@ -195,12 +197,7 @@
 
 .principal .navbar-css {
   background: #020024;
-}
-
-.principal .navbar-css .navbar-title {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  font-family: 'Pacifico', cursive;
 }
 
 .close {

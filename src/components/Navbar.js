@@ -13,7 +13,7 @@ const Navigationbar = () => {
               width='30'
               className='d-inline-block align-top'
             />{' '}
-            Data for countries
+            countriesData
           </Navbar.Brand>
         </Container>
       </Navbar>
