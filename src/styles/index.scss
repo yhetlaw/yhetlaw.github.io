@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Rampart+One&family=Zen+Kaku+Gothic+New:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Pacifico&display=swap');
 
 .principal {
   display: flex;
@@ -7,6 +7,7 @@
   background: white;
   overflow: hidden;
   overflow-y: auto;
+
   .home-div {
     display: flex;
     align-items: center;
@@ -14,25 +15,61 @@
     margin-top: 6%;
     height: 87vh;
     width: 100vw;
-    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-family: 'Oxygen', sans-serif;
+    background-image: radial-gradient(73% 147%, #eadfdf 59%, #ece2df 100%),
+      radial-gradient(91% 146%, rgba(255, 255, 255, 0.5) 47%, rgba(0, 0, 0, 0.5) 100%);
+    background-blend-mode: screen;
 
     .home-div-main {
-      background-color: wheat;
+      //background-color: whitesmoke;
       display: flex;
       align-items: flex-start;
       justify-content: center;
       width: 70%;
-      height: 70%;
+      height: 60%;
 
       div {
-        border: 2px solid black;
+        //border: 2px solid black;
       }
 
       .home-div-box-1 {
         flex: 1;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        padding: 20px 50px 0 60px;
+        height: 80%;
+
+        h1 {
+          word-break: keep-all;
+          font-size: 34px;
+          font-weight: 700;
+          padding-bottom: 15px;
+        }
+
+        p {
+          font-size: 20px;
+          font-weight: 300;
+        }
+
+        Button {
+          margin-top: 10px;
+          width: 180px;
+          font-weight: 700;
+        }
       }
       .home-div-box-2 {
         flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        height: 100%;
+
+        img {
+          height: 97%;
+          //border: 1px solid black;
+          box-shadow: 5px 15px 20px rgb(107, 107, 107);
+        }
       }
     }
   }
