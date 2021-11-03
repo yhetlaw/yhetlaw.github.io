@@ -4,6 +4,7 @@ import ShowInfo from './Search-ShowInfo';
 import CountriesList from './Search-CountriesList';
 import TooManyCatches from './Search.TooManyCatches';
 import InvalidText from './Search.InvalidText';
+import { InputGroup, FormControl } from 'react-bootstrap';
 
 const Search = ({ countries, weather, setCapital }) => {
   const inputSearch = document.getElementById('inputSearch');
@@ -82,9 +83,26 @@ const Search = ({ countries, weather, setCapital }) => {
     <div>
       <div className='box-1'>
         <div className='box-1-1'>
-          <div className='input-div'>
-            <h5>Search:</h5>
-            <input id='inputSearch' onChange={handleSearchChange} autocomplete='off' />
+          <div className='teste'>
+            <InputGroup className='input-teste'>
+              <InputGroup.Text>
+                <span className='material-icons-outlined aaa'>search</span>
+              </InputGroup.Text>
+              <FormControl
+                aria-label='Amount (to the nearest dollar)'
+                placeholder='Search for a country'
+                id='inputSearch'
+                onChange={handleSearchChange}
+                autoComplete='off'
+              />
+
+              {/* <input
+                placeholder='Search for a country'
+                id='inputSearch'
+                onChange={handleSearchChange}
+                autoComplete='off'
+              /> */}
+            </InputGroup>
           </div>
         </div>
         <div className='box-1-2'>

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 @import './Variables/variables';
 
 $tablet: 850px;
@@ -11,6 +12,20 @@ $tablet: 850px;
 $mobile: 680px;
 @mixin mobile {
   @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
+$small: 475px;
+@mixin small {
+  @media (max-width: #{$small}) {
+    @content;
+  }
+}
+
+$fold: 300px;
+@mixin fold {
+  @media (max-width: #{$fold}) {
     @content;
   }
 }
@@ -33,13 +48,12 @@ $mobile: 680px;
     width: 100vw;
 
     .home-card {
-      $self: &;
       display: flex;
-      align-items: flex-start;
+      align-items: center;
       justify-content: center;
       width: 70%;
       height: 60%;
-      border: 1px solid red;
+      //border: 1px solid red;
 
       @include mobile {
         flex-direction: column;
@@ -58,21 +72,43 @@ $mobile: 680px;
           padding: 0;
         }
 
+        @include fold {
+          align-items: center;
+        }
+
+        @include small {
+          align-items: center;
+          text-align: center;
+        }
+
         .home-card__title {
           word-break: keep-all;
           font-size: 2.25rem;
           font-weight: 700;
           padding-bottom: 15px;
-          border: 1px solid red;
+
+          @include small {
+            font-size: 1.5rem;
+          }
 
           @include mobile {
             margin-top: 50px;
+          }
+
+          @include fold {
+            margin-top: 80px;
+            font-size: 1.3rem;
+            text-align: center;
           }
         }
 
         .home-card__text {
           font-size: 1.2rem;
           font-weight: 300;
+
+          @include fold {
+            text-align: center;
+          }
         }
 
         .home-card__button {
@@ -87,23 +123,38 @@ $mobile: 680px;
         display: flex;
         justify-content: flex-end;
         height: 100%;
+        font-size: 20px;
+
+        @include tablet() {
+          font-size: 16px;
+        }
 
         @include mobile {
           width: 100%;
+          justify-content: center;
+          font-size: 14px;
+        }
+
+        @include small {
+          font-size: 10px;
+        }
+
+        @include fold {
+          font-size: 7px;
         }
 
         .home-card__img {
-          height: 23em;
+          height: 19em;
           //border: 1px solid black;
           box-shadow: 5px 15px 20px rgb(107, 107, 107);
-
-          @include tablet() {
-            height: 16em;
-          }
+          align-self: center;
 
           @include mobile {
             margin-top: 22px;
-            width: 100%;
+          }
+
+          @include fold {
+            margin-top: 40px;
           }
         }
       }
@@ -130,9 +181,10 @@ $mobile: 680px;
       .box-1 {
         flex: 1;
         display: flex;
+        margin-top: 20px;
 
         div {
-          flex-direction: column;
+          //border: 1px solid red;
         }
 
         .box-1-1 {
@@ -144,7 +196,7 @@ $mobile: 680px;
           display: flex;
           justify-content: center;
           align-items: center;
-          margin-top: 25px;
+          margin-top: 15px;
         }
 
         .input-div {
@@ -282,4 +334,8 @@ $mobile: 680px;
 
   .result-container {
   }
+}
+
+.aaa {
+  background: search;
 }
