@@ -1,38 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Pacifico&display=swap');
+@import './Variables/variables';
 
 .principal {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: white;
-  overflow: hidden;
-  overflow-y: auto;
+  font-family: 'Oxygen', sans-serif;
 
-  .home-div {
+  div {
+    //border: 1px solid red;
+  }
+  .home {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 6%;
-    height: 87vh;
+    height: 100vh;
     width: 100vw;
-    font-family: 'Oxygen', sans-serif;
-    background-image: radial-gradient(73% 147%, #eadfdf 59%, #ece2df 100%),
-      radial-gradient(91% 146%, rgba(255, 255, 255, 0.5) 47%, rgba(0, 0, 0, 0.5) 100%);
-    background-blend-mode: screen;
 
-    .home-div-main {
-      //background-color: whitesmoke;
+    .home-card {
+      $self: &;
       display: flex;
       align-items: flex-start;
       justify-content: center;
       width: 70%;
       height: 60%;
+      border: 1px solid red;
 
-      div {
-        //border: 2px solid black;
-      }
-
-      .home-div-box-1 {
+      &__box1 {
         flex: 1;
         display: flex;
         align-items: flex-start;
@@ -41,32 +36,33 @@
         padding: 20px 50px 0 60px;
         height: 80%;
 
-        h1 {
+        .home-card__title {
           word-break: keep-all;
-          font-size: 34px;
+          font-size: 2.25rem;
           font-weight: 700;
           padding-bottom: 15px;
         }
 
-        p {
-          font-size: 20px;
+        .home-card__text {
+          font-size: 1.2rem;
           font-weight: 300;
         }
 
-        Button {
+        .home-card__button {
           margin-top: 10px;
           width: 180px;
           font-weight: 700;
         }
       }
-      .home-div-box-2 {
+
+      &__box2 {
         flex: 1;
         display: flex;
         justify-content: flex-end;
         height: 100%;
 
-        img {
-          height: 97%;
+        .home-card__img {
+          height: 23em;
           //border: 1px solid black;
           box-shadow: 5px 15px 20px rgb(107, 107, 107);
         }
@@ -74,19 +70,16 @@
     }
   }
 
-  //background: whitesmoke;
-
   .wrapper {
-    margin-top: 100px;
     text-align: left;
-    height: 100vh;
-    width: 70%;
+    height: 99vh;
+    width: 99vw;
     justify-content: flex-start;
     font-family: 'Zen Kaku Gothic New', sans-serif;
-    //background: blue;
 
     .container-1 {
       display: flex;
+      margin-top: 5rem;
       //background: whitesmoke;
 
       div {
@@ -149,10 +142,11 @@
           .result-box-3 {
             flex: 1;
             order: 1;
+            display: flex;
 
             img {
               width: auto;
-              height: 100%;
+              max-height: 20rem;
               position: absolute;
               left: 5%;
               top: 0%;
@@ -215,8 +209,7 @@
   .navbar-css {
     background: rgb(31, 31, 31);
     font-family: 'Pacifico', cursive;
-    height: 13%;
-
+    height: 5rem;
     .navbar-link {
       text-decoration: none;
       color: white;
@@ -234,5 +227,19 @@
   svg {
     width: 35px;
     height: 35px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .home-div-main {
+    flex-direction: column;
+
+    .home-div-box-2 {
+      align-self: center;
+      font-size: 12px;
+    }
+  }
+
+  .result-container {
   }
 }

@@ -11,12 +11,10 @@ const App = () => {
       <div>
         <div className='principal'>
           <Navigationbar />
-          <div>
-            <Switch>
-              <Route path='/' exact component={Home} />
-              <Route path='/getstarted' component={GetStarted} />
-            </Switch>
-          </div>
+          <Switch>
+            <Route path='/' exact component={Home} />
+            <Route path='/getstarted' component={GetStarted} />
+          </Switch>
         </div>
       </div>
     </Router>
