@@ -1,6 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Pacifico&display=swap');
 @import './Variables/variables';
 
+$tablet: 850px;
+@mixin tablet {
+  @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+$mobile: 680px;
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
 .principal {
   display: flex;
   flex-direction: column;
@@ -27,6 +41,10 @@
       height: 60%;
       border: 1px solid red;
 
+      @include mobile {
+        flex-direction: column;
+      }
+
       &__box1 {
         flex: 1;
         display: flex;
@@ -36,11 +54,20 @@
         padding: 20px 50px 0 60px;
         height: 80%;
 
+        @include mobile {
+          padding: 0;
+        }
+
         .home-card__title {
           word-break: keep-all;
           font-size: 2.25rem;
           font-weight: 700;
           padding-bottom: 15px;
+          border: 1px solid red;
+
+          @include mobile {
+            margin-top: 50px;
+          }
         }
 
         .home-card__text {
@@ -61,10 +88,23 @@
         justify-content: flex-end;
         height: 100%;
 
+        @include mobile {
+          width: 100%;
+        }
+
         .home-card__img {
           height: 23em;
           //border: 1px solid black;
           box-shadow: 5px 15px 20px rgb(107, 107, 107);
+
+          @include tablet() {
+            height: 16em;
+          }
+
+          @include mobile {
+            margin-top: 22px;
+            width: 100%;
+          }
         }
       }
     }
