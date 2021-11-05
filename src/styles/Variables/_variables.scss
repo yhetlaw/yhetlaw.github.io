@@ -1,6 +1,31 @@
 $background-color: radial-gradient(73% 147%, #eadfdf 59%, #ece2df 100%),
   radial-gradient(91% 146%, rgba(255, 255, 255, 0.5) 47%, rgba(0, 0, 0, 0.5) 100%);
 
-$breakpoint-medium: 800px;
-$breakpoint-large: 1000px;
-$breakpoint-huge: 1200px;
+//Mixin breakpoints for media queries
+$tablet: 870px;
+@mixin tablet {
+  @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+$mobile: 680px;
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
+$small: 475px;
+@mixin small {
+  @media (max-width: #{$small}) {
+    @content;
+  }
+}
+
+$fold: 300px;
+@mixin fold {
+  @media (max-width: #{$fold}) {
+    @content;
+  }
+}
