@@ -392,10 +392,6 @@
   }
 }
 
-.main .getStarted .getStarted__container .show-country .show-country__result div {
-  padding: 10px;
-}
-
 .main .getStarted .getStarted__container .show-country .show-country__result .show-country__box1 {
   -webkit-box-flex: 1;
       -ms-flex: 1;

@@ -194,10 +194,6 @@ $fold: 300px;
           flex-direction: column;
         }
 
-        div {
-          //border: 1px black solid;
-        }
-
         .search-container__box1 {
           flex: 1;
           display: flex;
@@ -287,13 +283,8 @@ $fold: 300px;
         .show-country__result {
           display: flex;
           border-top: 1px solid rgb(209, 209, 209);
-
           @include mobile() {
             flex-direction: column;
-          }
-
-          div {
-            padding: 10px;
           }
 
           .show-country__box1 {
@@ -325,7 +316,6 @@ $fold: 300px;
 }
 
 .close-button {
-  //background-color: blue;
   float: right;
   color: rgb(179, 179, 179);
   border: none;
