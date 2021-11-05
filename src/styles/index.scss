@@ -167,14 +167,14 @@ $fold: 300px;
       }
     }
   }
-  .getStarted-body {
+  .getStarted {
     text-align: left;
     height: 99vh;
     width: 99vw;
     justify-content: flex-start;
     font-family: 'Zen Kaku Gothic New', sans-serif;
 
-    .getStarted-body__container {
+    .getStarted__container {
       display: flex;
       margin-top: 5rem;
 
@@ -186,10 +186,16 @@ $fold: 300px;
         flex: 1;
         display: flex;
         margin-top: 20px;
+        height: 5rem;
+        padding: 0;
         //border: 1px black solid;
 
         @include mobile {
           flex-direction: column;
+        }
+
+        div {
+          //border: 1px black solid;
         }
 
         .search-container__box1 {
@@ -210,14 +216,14 @@ $fold: 300px;
 
         .search-container__box2 {
           flex: 1;
-          margin-top: 16px;
-
+          padding-bottom: 0;
           @include mobile {
             margin-top: -13px;
           }
 
           div {
             width: 25rem;
+            margin-top: 6px;
 
             @include tablet {
               width: 100%;
@@ -232,15 +238,14 @@ $fold: 300px;
         left: 0%;
         background-color: whitesmoke;
         padding: 0;
-        border: 1px solid red;
+        margin-top: 10px;
 
         .countries-list__cards {
           display: flex;
           justify-content: center;
           flex-wrap: wrap;
-          border: 1px solid red;
-          //background-color: rgb(139, 19, 19);
           padding: 0;
+          margin-top: 2rem;
 
           .countries-list__item {
             width: 12rem !important;
@@ -250,6 +255,7 @@ $fold: 300px;
             margin: 5px 15px 4rem 15px;
             background-size: 100%;
             cursor: pointer;
+            margin-top: 10px;
 
             &:hover {
               opacity: 0.7;
@@ -263,7 +269,6 @@ $fold: 300px;
               margin-top: 120px;
               font-size: 18px;
               padding: 0;
-              border: 1px solid red;
             }
           }
         }
@@ -275,18 +280,25 @@ $fold: 300px;
         left: 0;
         padding: 30px;
 
+        .show-country__name {
+          margin-left: 20px;
+        }
+
         .show-country__result {
           display: flex;
+          border-top: 1px solid rgb(209, 209, 209);
+
+          @include mobile() {
+            flex-direction: column;
+          }
 
           div {
             padding: 10px;
-            //border: 1px black solid;
           }
 
           .show-country__box1 {
             flex: 1;
             order: 2;
-            margin-left: 20%;
           }
           .show-country__box2 {
             flex: 1;
@@ -297,12 +309,13 @@ $fold: 300px;
             order: 1;
             display: flex;
 
+            @include fold() {
+              padding: 0;
+            }
+
             img {
-              width: auto;
-              max-height: 20rem;
-              position: absolute;
-              left: 5%;
-              top: 0%;
+              height: 100%;
+              max-width: 100%;
             }
           }
         }

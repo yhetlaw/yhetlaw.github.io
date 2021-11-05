@@ -35,8 +35,8 @@ const GetStarted = () => {
 
   return (
     <div>
-      <div className='getStarted-body'>
-        <div className='getStarted-body__container'>
+      <div className='getStarted'>
+        <div className='getStarted__container'>
           <Search countries={countries} weather={weather} setCapital={setCapital} />
         </div>
       </div>

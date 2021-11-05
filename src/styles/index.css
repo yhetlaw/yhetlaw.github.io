@@ -216,7 +216,7 @@
   }
 }
 
-.main .getStarted-body {
+.main .getStarted {
   text-align: left;
   height: 99vh;
   width: 99vw;
@@ -226,19 +226,19 @@
   font-family: 'Zen Kaku Gothic New', sans-serif;
 }
 
-.main .getStarted-body .getStarted-body__container {
+.main .getStarted .getStarted__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-top: 5rem;
 }
 
-.main .getStarted-body .getStarted-body__container div {
+.main .getStarted .getStarted__container div {
   width: 100%;
   padding: 10px;
 }
 
-.main .getStarted-body .getStarted-body__container .search-container {
+.main .getStarted .getStarted__container .search-container {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -246,10 +246,12 @@
   display: -ms-flexbox;
   display: flex;
   margin-top: 20px;
+  height: 5rem;
+  padding: 0;
 }
 
 @media (max-width: 680px) {
-  .main .getStarted-body .getStarted-body__container .search-container {
+  .main .getStarted .getStarted__container .search-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -257,7 +259,7 @@
   }
 }
 
-.main .getStarted-body .getStarted-body__container .search-container .search-container__box1 {
+.main .getStarted .getStarted__container .search-container .search-container__box1 {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -272,51 +274,52 @@
           align-items: center;
 }
 
-.main .getStarted-body .getStarted-body__container .search-container .search-container__box1 .search-container__input-group {
+.main .getStarted .getStarted__container .search-container .search-container__box1 .search-container__input-group {
   width: 25rem;
   padding: 0;
 }
 
 @media (max-width: 870px) {
-  .main .getStarted-body .getStarted-body__container .search-container .search-container__box1 .search-container__input-group {
+  .main .getStarted .getStarted__container .search-container .search-container__box1 .search-container__input-group {
     width: 100%;
   }
 }
 
-.main .getStarted-body .getStarted-body__container .search-container .search-container__box2 {
+.main .getStarted .getStarted__container .search-container .search-container__box2 {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  margin-top: 16px;
+  padding-bottom: 0;
 }
 
 @media (max-width: 680px) {
-  .main .getStarted-body .getStarted-body__container .search-container .search-container__box2 {
+  .main .getStarted .getStarted__container .search-container .search-container__box2 {
     margin-top: -13px;
   }
 }
 
-.main .getStarted-body .getStarted-body__container .search-container .search-container__box2 div {
+.main .getStarted .getStarted__container .search-container .search-container__box2 div {
   width: 25rem;
+  margin-top: 6px;
 }
 
 @media (max-width: 870px) {
-  .main .getStarted-body .getStarted-body__container .search-container .search-container__box2 div {
+  .main .getStarted .getStarted__container .search-container .search-container__box2 div {
     width: 100%;
   }
 }
 
-.main .getStarted-body .getStarted-body__container .countries-list {
+.main .getStarted .getStarted__container .countries-list {
   width: calc(100vw - (100vw - 100%));
   height: auto;
   position: absolute;
   left: 0%;
   background-color: whitesmoke;
   padding: 0;
-  border: 1px solid red;
+  margin-top: 10px;
 }
 
-.main .getStarted-body .getStarted-body__container .countries-list .countries-list__cards {
+.main .getStarted .getStarted__container .countries-list .countries-list__cards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -325,11 +328,11 @@
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  border: 1px solid red;
   padding: 0;
+  margin-top: 2rem;
 }
 
-.main .getStarted-body .getStarted-body__container .countries-list .countries-list__cards .countries-list__item {
+.main .getStarted .getStarted__container .countries-list .countries-list__cards .countries-list__item {
   width: 12rem !important;
   -o-object-fit: cover !important;
      object-fit: cover !important;
@@ -338,13 +341,14 @@
   margin: 5px 15px 4rem 15px;
   background-size: 100%;
   cursor: pointer;
+  margin-top: 10px;
 }
 
-.main .getStarted-body .getStarted-body__container .countries-list .countries-list__cards .countries-list__item:hover {
+.main .getStarted .getStarted__container .countries-list .countries-list__cards .countries-list__item:hover {
   opacity: 0.7;
 }
 
-.main .getStarted-body .getStarted-body__container .countries-list .countries-list__cards .countries-list__item div {
+.main .getStarted .getStarted__container .countries-list .countries-list__cards .countries-list__item div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -358,10 +362,9 @@
   margin-top: 120px;
   font-size: 18px;
   padding: 0;
-  border: 1px solid red;
 }
 
-.main .getStarted-body .getStarted-body__container .show-country {
+.main .getStarted .getStarted__container .show-country {
   background-color: whitesmoke;
   width: calc(100vw - (100vw - 100%));
   position: absolute;
@@ -369,27 +372,40 @@
   padding: 30px;
 }
 
-.main .getStarted-body .getStarted-body__container .show-country .show-country__result {
+.main .getStarted .getStarted__container .show-country .show-country__name {
+  margin-left: 20px;
+}
+
+.main .getStarted .getStarted__container .show-country .show-country__result {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  border-top: 1px solid #d1d1d1;
 }
 
-.main .getStarted-body .getStarted-body__container .show-country .show-country__result div {
+@media (max-width: 680px) {
+  .main .getStarted .getStarted__container .show-country .show-country__result {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.main .getStarted .getStarted__container .show-country .show-country__result div {
   padding: 10px;
 }
 
-.main .getStarted-body .getStarted-body__container .show-country .show-country__result .show-country__box1 {
+.main .getStarted .getStarted__container .show-country .show-country__result .show-country__box1 {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
-  margin-left: 20%;
 }
 
-.main .getStarted-body .getStarted-body__container .show-country .show-country__result .show-country__box2 {
+.main .getStarted .getStarted__container .show-country .show-country__result .show-country__box2 {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -398,7 +414,7 @@
           order: 3;
 }
 
-.main .getStarted-body .getStarted-body__container .show-country .show-country__result .show-country__box3 {
+.main .getStarted .getStarted__container .show-country .show-country__result .show-country__box3 {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -410,12 +426,15 @@
   display: flex;
 }
 
-.main .getStarted-body .getStarted-body__container .show-country .show-country__result .show-country__box3 img {
-  width: auto;
-  max-height: 20rem;
-  position: absolute;
-  left: 5%;
-  top: 0%;
+@media (max-width: 300px) {
+  .main .getStarted .getStarted__container .show-country .show-country__result .show-country__box3 {
+    padding: 0;
+  }
+}
+
+.main .getStarted .getStarted__container .show-country .show-country__result .show-country__box3 img {
+  height: 100%;
+  max-width: 100%;
 }
 
 .close-button {

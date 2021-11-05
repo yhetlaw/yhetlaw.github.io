@@ -23,7 +23,7 @@ const FullCountry = ({ status, CloseButtonHandle, matchedCountries, weather }) =
           />
         </svg>
       </button>
-      <h1 style={{ textAlign: 'center', marginLeft: '30%' }}>{matchedCountries[0].name}</h1>
+      <h1 className='show-country__name'>{matchedCountries[0].name}</h1>
       <div className='show-country__result'>
         <div className='show-country__box1'>
           <p>
