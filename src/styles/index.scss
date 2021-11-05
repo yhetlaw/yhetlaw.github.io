@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 @import './Variables/variables';
 
-$tablet: 850px;
+$tablet: 870px;
 @mixin tablet {
   @media (max-width: #{$tablet}) {
     @content;
@@ -30,15 +30,22 @@ $fold: 300px;
   }
 }
 
-.principal {
+.main {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-family: 'Oxygen', sans-serif;
 
-  div {
-    //border: 1px solid red;
+  .navbar {
+    background: rgb(31, 31, 31);
+    font-family: 'Pacifico', cursive;
+    height: 5rem;
+
+    &__link {
+      text-decoration: none;
+      color: white;
+    }
   }
   .home {
     display: flex;
@@ -160,61 +167,115 @@ $fold: 300px;
       }
     }
   }
-
-  .wrapper {
+  .getStarted-body {
     text-align: left;
     height: 99vh;
     width: 99vw;
     justify-content: flex-start;
     font-family: 'Zen Kaku Gothic New', sans-serif;
 
-    .container-1 {
+    .getStarted-body__container {
       display: flex;
       margin-top: 5rem;
-      //background: whitesmoke;
 
       div {
         width: 100%;
-        //border: 1px black solid;
         padding: 10px;
       }
-      .box-1 {
+      .search-container {
         flex: 1;
         display: flex;
         margin-top: 20px;
+        //border: 1px black solid;
 
-        div {
-          //border: 1px solid red;
+        @include mobile {
+          flex-direction: column;
         }
 
-        .box-1-1 {
+        .search-container__box1 {
           flex: 1;
-        }
-
-        .box-1-2 {
-          flex: 2;
           display: flex;
-          justify-content: center;
+          justify-content: flex-end;
           align-items: center;
-          margin-top: 15px;
+
+          .search-container__input-group {
+            width: 25rem;
+            padding: 0;
+
+            @include tablet {
+              width: 100%;
+            }
+          }
         }
 
-        .input-div {
-          margin-bottom: 20px;
-          input {
-            padding: 10px;
-            width: 100%;
+        .search-container__box2 {
+          flex: 1;
+          margin-top: 16px;
+
+          @include mobile {
+            margin-top: -13px;
+          }
+
+          div {
+            width: 25rem;
+
+            @include tablet {
+              width: 100%;
+            }
           }
         }
       }
-      .main-full-country {
+      .countries-list {
+        width: calc(100vw - (100vw - 100%));
+        height: auto;
+        position: absolute;
+        left: 0%;
+        background-color: whitesmoke;
+        padding: 0;
+        border: 1px solid red;
+
+        .countries-list__cards {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          border: 1px solid red;
+          //background-color: rgb(139, 19, 19);
+          padding: 0;
+
+          .countries-list__item {
+            width: 12rem !important;
+            object-fit: cover !important;
+            height: 8rem;
+            border-radius: 10px;
+            margin: 5px 15px 4rem 15px;
+            background-size: 100%;
+            cursor: pointer;
+
+            &:hover {
+              opacity: 0.7;
+            }
+
+            div {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: auto;
+              margin-top: 120px;
+              font-size: 18px;
+              padding: 0;
+              border: 1px solid red;
+            }
+          }
+        }
+      }
+      .show-country {
         background-color: whitesmoke;
         width: calc(100vw - (100vw - 100%));
         position: absolute;
         left: 0;
         padding: 30px;
 
-        .result-container {
+        .show-country__result {
           display: flex;
 
           div {
@@ -222,16 +283,16 @@ $fold: 300px;
             //border: 1px black solid;
           }
 
-          .result-box-1 {
+          .show-country__box1 {
             flex: 1;
             order: 2;
             margin-left: 20%;
           }
-          .result-box-2 {
+          .show-country__box2 {
             flex: 1;
             order: 3;
           }
-          .result-box-3 {
+          .show-country__box3 {
             flex: 1;
             order: 1;
             display: flex;
@@ -246,70 +307,11 @@ $fold: 300px;
           }
         }
       }
-
-      .countries-list {
-        width: calc(100vw - (100vw - 100%));
-        height: auto;
-        position: absolute;
-        left: 0%;
-        background-color: whitesmoke;
-
-        .button-close {
-          float: right;
-          border: none;
-          background: transparent;
-          font-size: 20px;
-        }
-
-        .cards {
-          display: flex;
-          justify-content: center;
-          flex-wrap: wrap;
-          //background-color: rgb(139, 19, 19);
-
-          .cards_item {
-            width: 12rem !important;
-            object-fit: cover !important;
-            height: 8rem;
-            border-radius: 10px;
-            margin: 5px 15px 6rem 15px;
-            background-size: 100%;
-            cursor: pointer;
-
-            &:hover {
-              opacity: 0.7;
-            }
-
-            div {
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              height: auto;
-              margin-top: 7rem;
-              font-size: 18px;
-            }
-          }
-        }
-      }
-    }
-
-    .country-flag {
-      width: 500px;
-    }
-  }
-
-  .navbar-css {
-    background: rgb(31, 31, 31);
-    font-family: 'Pacifico', cursive;
-    height: 5rem;
-    .navbar-link {
-      text-decoration: none;
-      color: white;
     }
   }
 }
 
-.close {
+.close-button {
   //background-color: blue;
   float: right;
   color: rgb(179, 179, 179);
@@ -317,25 +319,7 @@ $fold: 300px;
   background: transparent;
 
   svg {
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
   }
-}
-
-@media only screen and (max-width: 1000px) {
-  .home-div-main {
-    flex-direction: column;
-
-    .home-div-box-2 {
-      align-self: center;
-      font-size: 12px;
-    }
-  }
-
-  .result-container {
-  }
-}
-
-.aaa {
-  background: search;
 }

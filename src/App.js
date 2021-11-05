@@ -9,7 +9,7 @@ const App = () => {
   return (
     <Router>
       <div>
-        <div className='principal'>
+        <div className='main'>
           <Navigationbar />
           <Switch>
             <Route path='/' exact component={Home} />

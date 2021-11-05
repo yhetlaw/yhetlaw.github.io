@@ -1,7 +1,7 @@
 const ItemCard = ({ handleShowInfo, text, id, flag }) => {
   return (
     <div
-      className='cards_item'
+      className='countries-list__item'
       data-id={id}
       onClick={handleShowInfo}
       style={{ backgroundImage: `url(${flag})` }}>
@@ -17,7 +17,7 @@ const CountriesList = ({ status, matchedCountries, handleShowInfo }) => {
 
   return (
     <div className='countries-list'>
-      <div className='cards'>
+      <div className='countries-list__cards'>
         {matchedCountries.map((country) => (
           <ItemCard
             text={country.name}

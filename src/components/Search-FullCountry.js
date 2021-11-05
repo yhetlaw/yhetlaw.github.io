@@ -4,8 +4,8 @@ const FullCountry = ({ status, CloseButtonHandle, matchedCountries, weather }) =
   }
 
   return (
-    <div className='main-full-country'>
-      <button onClick={CloseButtonHandle} className='close'>
+    <div className='show-country'>
+      <button onClick={CloseButtonHandle} className='close-button'>
         <svg
           xmlns='http://www.w3.org/2000/svg'
           width='16'
@@ -24,9 +24,11 @@ const FullCountry = ({ status, CloseButtonHandle, matchedCountries, weather }) =
         </svg>
       </button>
       <h1 style={{ textAlign: 'center', marginLeft: '30%' }}>{matchedCountries[0].name}</h1>
-      <div className='result-container'>
-        <div className='result-box-1'>
-          <h5>Languages:</h5>
+      <div className='show-country__result'>
+        <div className='show-country__box1'>
+          <p>
+            <b>Languages:</b>
+          </p>
           <ul>
             {matchedCountries[0].languages.map((language) => (
               <li key={language.name}>{language.name}</li>
@@ -39,7 +41,7 @@ const FullCountry = ({ status, CloseButtonHandle, matchedCountries, weather }) =
             <b>Capital:</b> {matchedCountries[0].capital}
           </p>
         </div>
-        <div className='result-box-2'>
+        <div className='show-country__box2'>
           <p>
             <b>Temperature in {matchedCountries[0].capital}:</b> {weather.current.temperature}{' '}
             Celsius,
@@ -53,12 +55,8 @@ const FullCountry = ({ status, CloseButtonHandle, matchedCountries, weather }) =
             width='70'
             height='70'></img>
         </div>
-        <div className='result-box-3'>
-          <img
-            className='flag-country'
-            src={matchedCountries[0].flag}
-            alt={matchedCountries[0].name}
-            width='250'></img>
+        <div className='show-country__box3'>
+          <img src={matchedCountries[0].flag} alt={matchedCountries[0].name} width='250'></img>
         </div>
       </div>
     </div>

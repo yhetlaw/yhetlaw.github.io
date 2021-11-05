@@ -11,8 +11,8 @@ const ShowInfo = ({
   }
   setCapital(matchedCountries[indexCountry].capital);
   return (
-    <div className='main-full-country'>
-      <button onClick={CloseButtonHandle} className='close'>
+    <div className='show-country'>
+      <button onClick={CloseButtonHandle} className='close-button'>
         <svg
           xmlns='http://www.w3.org/2000/svg'
           width='16'
@@ -30,25 +30,27 @@ const ShowInfo = ({
           />
         </svg>
       </button>
-      <h1 style={{ textAlign: 'center' }}>{matchedCountries[indexCountry].name}</h1>
-      <div className='result-container'>
-        <div className='result-box-1'>
-          <h5>Languages:</h5>
+      <h1 style={{ textAlign: 'center', marginLeft: '30%' }}>
+        {matchedCountries[indexCountry].name}
+      </h1>
+      <div className='show-country__result'>
+        <div className='show-country__box1'>
+          <p>
+            <b>Languages:</b>
+          </p>
           <ul>
             {matchedCountries[indexCountry].languages.map((language) => (
               <li key={language.name}>{language.name}</li>
             ))}
           </ul>
           <p>
-            <b>Population:</b>
-            {matchedCountries[indexCountry].population}
+            <b>Population:</b> {matchedCountries[indexCountry].population}
+          </p>
+          <p>
+            <b>Capital:</b> {matchedCountries[indexCountry].capital}
           </p>
         </div>
-        <div className='result-box-2'>
-          <p>
-            <b>Capital:</b>
-            {matchedCountries[indexCountry].capital}
-          </p>
+        <div className='show-country__box2'>
           <p>
             <b>Temperature in {matchedCountries[indexCountry].capital}:</b>{' '}
             {weather.current.temperature} Celsius,
@@ -62,9 +64,8 @@ const ShowInfo = ({
             width='70'
             height='70'></img>
         </div>
-        <div className='result-box-3'>
+        <div className='show-country__box3'>
           <img
-            className='flag-country'
             src={matchedCountries[indexCountry].flag}
             alt={matchedCountries[indexCountry].name}
             width='250'></img>

@@ -5,10 +5,10 @@ import { Link } from 'react-router-dom';
 const Navigationbar = () => {
   return (
     <>
-      <Navbar fixed='top' className='navbar-css'>
+      <Navbar fixed='top' className='navbar'>
         <Container>
           <Navbar.Brand>
-            <Link to='/' className='navbar-link'>
+            <Link to='/' className='navbar__link'>
               <img
                 alt=''
                 src='https://www.freeiconspng.com/thumbs/globe-png/globe-png-hd-1.png'

@@ -5,6 +5,7 @@ import CountriesList from './Search-CountriesList';
 import TooManyCatches from './Search.TooManyCatches';
 import InvalidText from './Search.InvalidText';
 import { InputGroup, FormControl } from 'react-bootstrap';
+import { FaSearch } from 'react-icons/fa';
 
 const Search = ({ countries, weather, setCapital }) => {
   const inputSearch = document.getElementById('inputSearch');
@@ -68,6 +69,7 @@ const Search = ({ countries, weather, setCapital }) => {
   const indexCountry = mapedCountries.indexOf(id);
 
   const handleShowInfo = (event) => {
+    setCountryListStatus(false);
     setId(event.target.getAttribute('data-id'));
     !showInfoStatus ? setShowInfoStatus(true) : setShowInfoStatus(false);
   };
@@ -81,57 +83,46 @@ const Search = ({ countries, weather, setCapital }) => {
 
   return (
     <div>
-      <div className='box-1'>
-        <div className='box-1-1'>
-          <div className='teste'>
-            <InputGroup className='input-teste'>
-              <InputGroup.Text>
-                <span className='material-icons-outlined aaa'>search</span>
-              </InputGroup.Text>
-              <FormControl
-                aria-label='Amount (to the nearest dollar)'
-                placeholder='Search for a country'
-                id='inputSearch'
-                onChange={handleSearchChange}
-                autoComplete='off'
-              />
-
-              {/* <input
-                placeholder='Search for a country'
-                id='inputSearch'
-                onChange={handleSearchChange}
-                autoComplete='off'
-              /> */}
-            </InputGroup>
-          </div>
+      <div className='search-container'>
+        <div className='search-container__box1'>
+          <InputGroup className='search-container__input-group'>
+            <InputGroup.Text>
+              <FaSearch />
+            </InputGroup.Text>
+            <FormControl
+              aria-label='Amount (to the nearest dollar)'
+              placeholder='Search for a country'
+              id='inputSearch'
+              onChange={handleSearchChange}
+              autoComplete='off'
+            />
+          </InputGroup>
         </div>
-        <div className='box-1-2'>
+        <div className='search-container__box2'>
           <TooManyCatches status={tooManyCatchesStatus} />
           <InvalidText status={invalidText} />
         </div>
       </div>
-      <div>
-        <CountriesList
-          status={countryListStatus}
-          matchedCountries={matchedCountries}
-          handleShowInfo={handleShowInfo}
-        />
-        <FullCountry
-          status={fullCountryStatus}
-          CloseButtonHandle={CloseButtonHandle}
-          matchedCountries={matchedCountries}
-          weather={weather}
-        />
-        <ShowInfo
-          status={showInfoStatus}
-          CloseButtonHandle={CloseButtonHandle}
-          matchedCountries={matchedCountries}
-          id={id}
-          weather={weather}
-          indexCountry={indexCountry}
-          setCapital={setCapital}
-        />
-      </div>
+      <CountriesList
+        status={countryListStatus}
+        matchedCountries={matchedCountries}
+        handleShowInfo={handleShowInfo}
+      />
+      <FullCountry
+        status={fullCountryStatus}
+        CloseButtonHandle={CloseButtonHandle}
+        matchedCountries={matchedCountries}
+        weather={weather}
+      />
+      <ShowInfo
+        status={showInfoStatus}
+        CloseButtonHandle={CloseButtonHandle}
+        matchedCountries={matchedCountries}
+        id={id}
+        weather={weather}
+        indexCountry={indexCountry}
+        setCapital={setCapital}
+      />
     </div>
   );
 };
