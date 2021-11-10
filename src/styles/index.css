@@ -111,7 +111,7 @@
 
 .main .home .home-card__box1 .home-card__title {
   word-break: keep-all;
-  font-size: 2.25rem;
+  font-size: 3.5rem;
   font-weight: 700;
   padding-bottom: 15px;
 }
@@ -137,20 +137,37 @@
 }
 
 .main .home .home-card__box1 .home-card__text {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 300;
 }
 
 @media (max-width: 300px) {
   .main .home .home-card__box1 .home-card__text {
     text-align: center;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 475px) {
+  .main .home .home-card__box1 .home-card__text {
+    font-size: 1.3rem;
   }
 }
 
 .main .home .home-card__box1 .home-card__button {
   margin-top: 10px;
-  width: 180px;
+  width: 200px;
+  height: 50px;
   font-weight: 700;
+  font-size: 1.25rem;
+}
+
+@media (max-width: 475px) {
+  .main .home .home-card__box1 .home-card__button {
+    font-size: 1rem;
+    width: 160px;
+    height: 40px;
+  }
 }
 
 .main .home .home-card__box2 {
@@ -401,14 +418,29 @@
 
 .main .getStarted .getStarted__container .show-country {
   width: calc(100vw - (100vw - 100%));
+  height: 40%;
   position: absolute;
   left: 0;
   padding: 30px;
-  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .main .getStarted .getStarted__container .show-country .show-country__name {
-  margin-left: 20px;
+  position: absolute;
+  left: 13%;
+  top: 17%;
+}
+
+@media (max-width: 680px) {
+  .main .getStarted .getStarted__container .show-country .show-country__name {
+    position: absolute;
+    left: 18%;
+  }
 }
 
 .main .getStarted .getStarted__container .show-country .show-country__result {
@@ -416,6 +448,10 @@
   display: -ms-flexbox;
   display: flex;
   border-top: 1px solid #d1d1d1;
+  width: 80%;
+  height: 70%;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 @media (max-width: 680px) {
@@ -469,10 +505,26 @@
 }
 
 .close-button {
-  float: right;
+  position: absolute;
+  left: 87%;
+  top: 20%;
   color: #b3b3b3;
   border: none;
   background: transparent;
+}
+
+@media (max-width: 680px) {
+  .close-button {
+    position: absolute;
+    left: 78%;
+  }
+}
+
+@media (max-width: 475px) {
+  .close-button {
+    position: absolute;
+    left: 75%;
+  }
 }
 
 .close-button svg {
