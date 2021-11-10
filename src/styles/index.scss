@@ -145,11 +145,11 @@
     width: 99vw;
     justify-content: flex-start;
     font-family: 'Zen Kaku Gothic New', sans-serif;
+    background-color: rgb(231, 246, 255);
 
     .getStarted__container {
       display: flex;
       margin-top: 5rem;
-
       div {
         width: 100%;
         padding: 10px;
@@ -197,6 +197,38 @@
             @include tablet {
               width: 100%;
             }
+          }
+        }
+        .search-container__wave {
+          position: absolute;
+          height: 50vh;
+          width: 100%;
+          bottom: 0;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-color: white;
+
+          &::before,
+          &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            border-radius: 50% 50%;
+          }
+          &::before {
+            width: 55%;
+            height: 109%;
+            background-color: rgb(255, 255, 255);
+            right: -1.5%;
+            top: 60%;
+          }
+          &::after {
+            width: 55%;
+            height: 100%;
+            background-color: #ffffff;
+            left: -1.5%;
+            top: 40%;
           }
         }
       }
@@ -297,25 +329,4 @@
     width: 30px;
     height: 30px;
   }
-}
-
-.triangle {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: #2c3e50;
-  height: 28vh;
-}
-
-.triangle::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 30px 30px 10px 30px;
-  border-color: #2c3e50 transparent transparent transparent;
-  left: 8.5%;
-  transform: translateX(-50%) translateY(100%);
 }
