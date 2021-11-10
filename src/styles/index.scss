@@ -175,6 +175,7 @@
           .search-container__input-group {
             width: 25rem;
             padding: 0;
+            z-index: 10;
 
             @include tablet {
               width: 100%;
@@ -204,9 +205,8 @@
         height: auto;
         position: absolute;
         left: 0%;
-        background-color: whitesmoke;
         padding: 0;
-        margin-top: 10px;
+        margin-top: 30px;
 
         .countries-list__cards {
           display: flex;
@@ -242,11 +242,11 @@
         }
       }
       .show-country {
-        background-color: whitesmoke;
         width: calc(100vw - (100vw - 100%));
         position: absolute;
         left: 0;
         padding: 30px;
+        margin-top: 30px;
 
         .show-country__name {
           margin-left: 20px;
@@ -297,4 +297,25 @@
     width: 30px;
     height: 30px;
   }
+}
+
+.triangle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #2c3e50;
+  height: 28vh;
+}
+
+.triangle::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 30px 30px 10px 30px;
+  border-color: #2c3e50 transparent transparent transparent;
+  left: 8.5%;
+  transform: translateX(-50%) translateY(100%);
 }

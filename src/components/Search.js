@@ -83,6 +83,7 @@ const Search = ({ countries, weather, setCapital }) => {
 
   return (
     <div>
+      <div className='triangle'></div>
       <div className='search-container'>
         <div className='search-container__box1'>
           <InputGroup className='search-container__input-group'>
