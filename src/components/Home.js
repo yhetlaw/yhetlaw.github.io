@@ -16,13 +16,7 @@ const Home = () => {
             </Button>{' '}
           </Link>
         </div>
-        <div className='home-card__box2'>
-          <img
-            src='https://npr.brightspotcdn.com/dims4/default/3e4f755/2147483647/strip/true/crop/1500x1064+0+0/resize/880x624!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Flegacy%2Fsites%2Fvpr%2Ffiles%2F201701%2FMap-countries-istock-ZarkoCvijovic-20170104.jpg'
-            alt=''
-            className='home-card__img'
-          />
-        </div>
+        <div className='home-card__box2'></div>
       </div>
     </div>
   );
