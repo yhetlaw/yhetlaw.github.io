@@ -1,6 +1,7 @@
 import React from 'react';
 import { Navbar, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { FaGithub } from 'react-icons/fa';
 
 const Navigationbar = () => {
   return (
@@ -17,6 +18,11 @@ const Navigationbar = () => {
               />{' '}
               countriesData
             </Link>
+          </Navbar.Brand>
+          <Navbar.Brand>
+            <a href='https://github.com/yhetlaw' target='_blank' className='navbar__github'>
+              <FaGithub />
+            </a>
           </Navbar.Brand>
         </Container>
       </Navbar>

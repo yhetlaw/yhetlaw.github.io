@@ -28,6 +28,11 @@
   color: white;
 }
 
+.main .navbar__github {
+  color: white;
+  font-size: 2rem;
+}
+
 .main .home {
   display: -webkit-box;
   display: -ms-flexbox;
