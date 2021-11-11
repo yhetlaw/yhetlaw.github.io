@@ -65,12 +65,12 @@ const Search = ({ countries, weather, setCapital }) => {
       setInvalidText(false);
     }
   };
-
   const indexCountry = mapedCountries.indexOf(id);
 
   const handleShowInfo = (event) => {
     setCountryListStatus(false);
     setId(event.target.getAttribute('data-id'));
+    console.log(id);
     !showInfoStatus ? setShowInfoStatus(true) : setShowInfoStatus(false);
   };
 
@@ -84,7 +84,6 @@ const Search = ({ countries, weather, setCapital }) => {
   return (
     <div>
       <div className='search-container'>
-        <div className='search-container__wave'></div>
         <div className='search-container__box1'>
           <InputGroup className='search-container__input-group'>
             <InputGroup.Text>

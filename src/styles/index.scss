@@ -8,7 +8,6 @@
   align-items: center;
   justify-content: center;
   font-family: 'Oxygen', sans-serif;
-
   .navbar {
     background: rgb(31, 31, 31);
     font-family: 'Pacifico', cursive;
@@ -157,11 +156,10 @@
     width: 99vw;
     justify-content: flex-start;
     font-family: 'Zen Kaku Gothic New', sans-serif;
-    background-color: rgb(231, 246, 255);
-
     .getStarted__container {
       display: flex;
       margin-top: 5rem;
+
       div {
         width: 100%;
         padding: 10px;
@@ -172,8 +170,6 @@
         margin-top: 20px;
         height: 5rem;
         padding: 0;
-        //border: 1px black solid;
-
         @include mobile {
           flex-direction: column;
         }
@@ -187,7 +183,6 @@
           .search-container__input-group {
             width: 25rem;
             padding: 0;
-            z-index: 10;
 
             @include tablet {
               width: 100%;
@@ -211,38 +206,6 @@
             }
           }
         }
-        .search-container__wave {
-          position: absolute;
-          height: 50vh;
-          width: 100%;
-          bottom: 0;
-          position: absolute;
-          top: 0;
-          left: 0;
-          background-color: white;
-
-          &::before,
-          &::after {
-            content: '';
-            display: block;
-            position: absolute;
-            border-radius: 50% 50%;
-          }
-          &::before {
-            width: 55%;
-            height: 109%;
-            background-color: rgb(255, 255, 255);
-            right: -1.5%;
-            top: 60%;
-          }
-          &::after {
-            width: 55%;
-            height: 100%;
-            background-color: #ffffff;
-            left: -1.5%;
-            top: 40%;
-          }
-        }
       }
       .countries-list {
         width: calc(100vw - (100vw - 100%));
@@ -251,6 +214,8 @@
         left: 0%;
         padding: 0;
         margin-top: 30px;
+        display: flex;
+        justify-content: center;
 
         .countries-list__cards {
           display: flex;
@@ -258,11 +223,11 @@
           flex-wrap: wrap;
           padding: 0;
           margin-top: 2rem;
+          width: 75%;
 
           .countries-list__item {
-            width: 12rem !important;
-            object-fit: cover !important;
-            height: 8rem;
+            width: 15rem !important;
+            height: 10rem;
             border-radius: 10px;
             margin: 5px 15px 4rem 15px;
             background-size: 100%;
@@ -272,13 +237,17 @@
             &:hover {
               opacity: 0.7;
             }
-
+            img {
+              max-width: 100%;
+              height: auto;
+              box-shadow: 1px 1px 5px 1px rgb(200, 200, 200);
+            }
             div {
               display: flex;
               justify-content: center;
               align-items: center;
               height: auto;
-              margin-top: 120px;
+              margin-top: 15px;
               font-size: 18px;
               padding: 0;
             }
@@ -335,6 +304,7 @@
             img {
               height: 100%;
               max-width: 100%;
+              object-fit: cover;
             }
           }
         }

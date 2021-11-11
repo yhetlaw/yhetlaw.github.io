@@ -1,10 +1,7 @@
 const ItemCard = ({ handleShowInfo, text, id, flag }) => {
   return (
-    <div
-      className='countries-list__item'
-      data-id={id}
-      onClick={handleShowInfo}
-      style={{ backgroundImage: `url(${flag})` }}>
+    <div className='countries-list__item' onClick={handleShowInfo}>
+      <img src={flag} alt='country' data-id={id} />
       <div>{text}</div>
     </div>
   );
@@ -14,7 +11,6 @@ const CountriesList = ({ status, matchedCountries, handleShowInfo }) => {
   if (!status) {
     return null;
   }
-
   return (
     <div className='countries-list'>
       <div className='countries-list__cards'>
