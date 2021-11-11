@@ -246,7 +246,7 @@
           width: 80%;
           height: 70%;
           align-self: flex-end;
-          background-color: rgb(49, 49, 49);
+          background-color: rgb(21, 20, 26);
           opacity: 0.8;
           @include mobile() {
             flex-direction: column;
@@ -254,6 +254,7 @@
 
           div {
             margin: 20px 0 20px 0;
+            font-size: 1.1rem;
           }
           .show-country__box1 {
             flex: 1;

@@ -369,7 +369,7 @@
   height: 70%;
   -ms-flex-item-align: end;
       align-self: flex-end;
-  background-color: #313131;
+  background-color: #15141a;
   opacity: 0.8;
 }
 
@@ -384,6 +384,7 @@
 
 .main .getStarted .getStarted__container .show-country .show-country__result div {
   margin: 20px 0 20px 0;
+  font-size: 1.1rem;
 }
 
 .main .getStarted .getStarted__container .show-country .show-country__result .show-country__box1 {
